@@ -3,13 +3,13 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-
+use App\Mail\Testmail;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\OperateurController;
 use App\Http\Controllers\SuperviseurController;
 use App\Http\Controllers\CoordinateurController;
 
-
+use Illuminate\Support\Facades\Mail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,7 +22,9 @@ use App\Http\Controllers\CoordinateurController;
 */
 
 
-
+// Route::get('/test', function () {
+// Mail::to('iliasssjb2004@gmail.com')->send(new Testmail);
+// });
 
 Route::get('/', function () {
     return view('welcome');
