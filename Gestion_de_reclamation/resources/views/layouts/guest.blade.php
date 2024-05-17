@@ -10,7 +10,14 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
+        <style>
+            .title {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+                color: #333;
+                font-family: Georgia, 'Times New Roman', Times, serif
+            }
+        </style>
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -18,7 +25,8 @@
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
             <div>
                 <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                    {{-- <x-application-logo class="w-20 h-20 fill-current text-gray-500" /> --}}
+                    <div class="title">Gestion de reclamation</div>
                 </a>
             </div>
 

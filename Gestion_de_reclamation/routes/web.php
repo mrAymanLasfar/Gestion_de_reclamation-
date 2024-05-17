@@ -8,7 +8,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\OperateurController;
 use App\Http\Controllers\SuperviseurController;
 use App\Http\Controllers\CoordinateurController;
-
+use App\Models\User;
 use Illuminate\Support\Facades\Mail;
 /*
 |--------------------------------------------------------------------------
@@ -22,12 +22,23 @@ use Illuminate\Support\Facades\Mail;
 */
 
 
-// Route::get('/test', function () {
-// Mail::to('iliasssjb2004@gmail.com')->send(new Testmail);
-// });
+Route::get('/test00', function () {
+Mail::to('02012004.al@gmail.com')->send(new Testmail);
+});
 
 Route::get('/', function () {
     return view('welcome');
+});
+Route::get('/test', function () {
+   
+$user = User::find(1);
+
+if ($user->hasRole('admin')) {
+    echo 'User is an admin';
+} else {
+    echo 'User is not an admin';
+}
+
 });
 
 Route::get('/dashboard', function () {
